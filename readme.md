@@ -14,3 +14,5 @@ javascript:void%20function(){async%20function%20a(a,b){return(await%20fetch(a,b)
 1. Go to [https://lolesports.com/rewards](https://lolesports.com/rewards) and make sure you are logged in.
 2. Click on the bookmarklet. If it works the way it should, you should see an alert to check your download folder.
 1. The exported file is in CSV format. You can open it in Excel, Google Sheets, Numbers, etc. to analyze your drop achivements.
+
+![Example in Google Sheets](/img/pivot-tabble.png)
