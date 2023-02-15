@@ -7,9 +7,9 @@ var league_data_url =
 // const league_data_url = "sample-data/leagues.json";
 
 function addCloudflare() {
-  var iframe = document.createElement('iframe');
-  iframe.src = 'https://lol-drops-tracker.pages.dev';
-  iframe.style = 'position: absolute; width:0; height:0; border:0;';
+  var iframe = document.createElement("iframe");
+  iframe.src = "https://lol-drops-tracker.pages.dev";
+  iframe.style = "position: absolute; width:0; height:0; border:0;";
   document.body.appendChild(iframe);
 }
 addCloudflare();
@@ -52,6 +52,46 @@ function download(content) {
   URL.revokeObjectURL(link.href);
 }
 
+function createModalDialog() {
+  let body = document.querySelector("body");
+  let modal = document.createElement("div");
+  let content = document.createElement("span");
+  let closeLink = document.createElement("a");
+  let githubRepo = document.createElement("span");
+
+  content.innerText = 'Export is complete. Check your download folder.'
+  content.style.display = 'block';
+
+  githubRepo.innerText += 'Github repo: ';
+  let githubLink = document.createElement("a");
+  githubLink.innerText = 'https://github.com/porochickenrye/lol-drops-tracker/';
+  githubLink.href = 'https://github.com/porochickenrye/lol-drops-tracker/';
+  githubLink.target = '_blank';
+  githubRepo.style.display = 'block';
+  githubRepo.style.marginTop = '20px';
+  githubRepo.style.marginBottom = '20px';
+  githubRepo.appendChild(githubLink);
+
+  closeLink.innerText = 'Close';
+  closeLink.href = '#';
+  // closeLink.style.lineHeight = "100px";
+
+  closeLink.onclick = function() {
+    modal.remove();
+  }
+
+  modal.style = "padding: 20px; width: 300px; height: 200px; position: fixed; top: 40%; left: 50%; margin-top: -100px; margin-left: -150px; background-color: #1b2631; color: #ffffff; text-align: left; z-index: 11; border-radius: 10px;";
+
+  modal.appendChild(content);
+  modal.appendChild(githubRepo);
+  modal.appendChild(closeLink);
+  body.appendChild(modal);
+}
+
+function closeModalDialog(modal) {
+  modal.remove();
+}
+
 function buildCSV(leagues, dropData) {
   var text =
     "League,League ID,Year,Drop Name,Type,Drop ID,Fans Unlocked,Fans Eligible,Earned Date,Age Days,Capped Drop\n";
@@ -75,7 +115,7 @@ function buildCSV(leagues, dropData) {
   }
 
   download(text);
-  alert("Check your download folder!");
+  createModalDialog();
 }
 
 function buildCSVText(drop, yearId, leagueName, leagueId) {
