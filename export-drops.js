@@ -3,9 +3,6 @@ var drop_data_url =
 var league_data_url =
   "https://esports-api.lolesports.com/persisted/gw/getLeagues?hl=en-US";
 
-// const drop_data_url = "sample-data/earned-drops-data.json";
-// const league_data_url = "sample-data/leagues.json";
-
 function addCloudflare() {
   var iframe = document.createElement("iframe");
   iframe.src = "https://lol-drops-tracker.pages.dev";
@@ -94,7 +91,7 @@ function closeModalDialog(modal) {
 
 function buildCSV(leagues, dropData) {
   var text =
-    "League,League ID,Year,Drop Name,Type,Drop ID,Fans Unlocked,Fans Eligible,Earned Date,Age Days,Capped Drop\n";
+    "League,League ID,Year,Title,Drop Name,Type,Drop ID,Fans Unlocked,Fans Eligible,Earned Date,Age Days,Capped Drop,Card URL\n";
   for (var leagueId in dropData) {
     try {
       var leagueName = "";
@@ -114,19 +111,23 @@ function buildCSV(leagues, dropData) {
     }
   }
 
+  // console.log(text);
   download(text);
   createModalDialog();
 }
 
 function buildCSVText(drop, yearId, leagueName, leagueId) {
   var dropId = drop.dropID;
-  var dropName = drop.dropsetTitle;
+  var dropName = removeQuotes(drop.dropsetTitle);
   var ageDays = drop.ageDays;
   var earnedDate = new Date(drop.unlockedDateMillis).toLocaleDateString();
   var dropType = drop.rarity.type;
   var numberOfFansUnlocked = drop.numberOfFansUnlocked;
   var eligibleRecipients = drop.eligibleRecipients;
   var cappedDrop = drop.cappedDrop;
+  var cardUrl = drop.dropsetImages.cardUrl;
+  var inventory = drop.inventory[0].localizedInventory;
+  var inventoryTitle = removeQuotes(Object.values(inventory.title)[0]);
   var csvText =
     leagueName +
     "," +
@@ -134,6 +135,8 @@ function buildCSVText(drop, yearId, leagueName, leagueId) {
     "," +
     yearId +
     ',"' +
+    inventoryTitle +
+    '","' +
     dropName +
     '",' +
     dropType +
@@ -149,8 +152,14 @@ function buildCSVText(drop, yearId, leagueName, leagueId) {
     ageDays +
     "," +
     cappedDrop +
-    "\n";
+    ',"' +
+    cardUrl +
+    '"\n';
   return csvText;
+}
+
+function removeQuotes(string) {
+  return string.replace(/["']/g, "");
 }
 
 function main() {
