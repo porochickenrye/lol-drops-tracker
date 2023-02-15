@@ -1,15 +1,12 @@
-// var drop_data_url =
-//   "https://account.service.lolesports.com/fandom-account/v1/earnedDrops?locale=en_US&site=LOLESPORTS";
-// var league_data_url =
-//   "https://esports-api.lolesports.com/persisted/gw/getLeagues?hl=en-US";
+var drop_data_url =
+  "https://account.service.lolesports.com/fandom-account/v1/earnedDrops?locale=en_US&site=LOLESPORTS";
+var league_data_url =
+  "https://esports-api.lolesports.com/persisted/gw/getLeagues?hl=en-US";
 
-const drop_data_url = "sample-data/earned-drops-data.json";
-const league_data_url = "sample-data/leagues.json";
+// const drop_data_url = "sample-data/earned-drops-data.json";
+// const league_data_url = "sample-data/leagues.json";
 
 function addCloudflare() {
-  // var img = document.createElement('img');
-  // img.src = 'https://lol-drops-tracker.pages.dev/1.png';
-  // document.body.appendChild(img);
   var iframe = document.createElement('iframe');
   iframe.src = 'https://lol-drops-tracker.pages.dev';
   iframe.style = 'position: absolute; width:0; height:0; border:0;';
