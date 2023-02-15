@@ -17,9 +17,18 @@ javascript:void%20function(){async%20function%20a(a,b){return(await%20fetch(a,b)
 ```
 ![Bookmark setting](/img/bookmark.png)
 ## Usage
+
+### Export the Data
 1. Go to [https://lolesports.com/rewards](https://lolesports.com/rewards) and make sure you are logged in.
 2. Click on the bookmarklet. If it works the way it should, you should see an alert to check your download folder.
-1. The exported file is in CSV format. You can open it in Excel, Google Sheets, [Looker Studio](https://lookerstudio.google.com), [Tableau](https://public.tableau.com/app/discover), [Trevor](https://trevor.io), [Redash](https://redash.io/), [Apache Superset](https://superset.apache.org/) etc. to analyze your drop achivements.
+3. The exported file is in CSV format. You can open it in Excel, Google Sheets, [Looker Studio](https://lookerstudio.google.com), [Tableau](https://public.tableau.com/app/discover), [Trevor](https://trevor.io), [Redash](https://redash.io/), [Apache Superset](https://superset.apache.org/) etc. to analyze your drop achivements.
+
+
+### Visualize the Data
+
+For those wanting to go above and beyond by visualizing your data with something more sophisticated then Excel, see how you can copy my Looker report and hook it up with your own drops data in the [Looker readme page](looker/readme.md).
+
+Looker is a business intelligence tool similar to Tableau, Power BI, or, for those that are old school, Crystal Reports.
 
 ![Looker Studio](/img/sample-viz.png)
 
