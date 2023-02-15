@@ -20,3 +20,8 @@ javascript:void%20function(){async%20function%20a(a,b){return(await%20fetch(a,b)
 1. The exported file is in CSV format. You can open it in Excel, Google Sheets, Numbers, etc. to analyze your drop achivements.
 
 ![Example in Google Sheets](/img/pivot-tabble.png)
+
+## Notes
+* A small number of leagues have League ID's but the Leagues themselves have been removed from Riot's API and that is why they can show up blank in the export.
+* Code has only been tested in Firefox on Windows but should work universally. If not, create a bug report in [Issues](issues/).
+* Something isn't working right? Open the Console in your browser's Develop Tools and look for any errors. Create a bug report in [Issues](issues/) if necessary.
