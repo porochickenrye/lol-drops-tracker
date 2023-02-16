@@ -8,7 +8,7 @@ Follow the below steps to set up your own Looker report based on a template I ha
 * Have a Google account. Looker is part of Google Cloud Platoform.
 
 ### Steps:
-1. Make sure you are signed into Google with the Google account you want to use and go to the [LoL Drops Looker report](https://lookerstudio.google.com/s/lGLZjNgAxSg)
+1. Make sure you are signed into Google with the Google account you want to use and go to the [LoL Drops Looker report](https://lookerstudio.google.com/reporting/ecbc3929-393f-449d-a958-7ce3cde4cd06)
 
 2. At the top right of the page, click the blue arrow next to the Share button and click `Make a Copy`
 
