@@ -2,6 +2,8 @@
 
 ![Looker Studio](/img/sample-viz.png)
 
+> :warning: **If you are looking to replace a report you created earlier with an updated template**: [see this section](#use-updated-template)
+
 Follow the below steps to set up your own Looker report based on a template I have put together. The reason I chose Looker is because it has the lowest barrier to entry technically and financially.
 
 ### Prerequisites:
@@ -51,3 +53,18 @@ Follow the below steps to set up your own Looker report based on a template I ha
 At this point, you should see a copy of LoL Drops report populated with your down data that you exported earlier. You can freely customize it to your preference as well as adding additional pages and charts.
 
 Also, note that once you make a copy of the report, it will not update itself when I update the source template. You will need to go through this process again to get any updates.
+
+## Use Updated Template
+
+From time to time I update my template, especially with requests from fellow discord users. If you had copied my template in the past to make your own report, all you need to do it make a copy of the template again (usually it has a new link), but instead of creating a new data source, you will use the same data source created earlier. The whole process should only take a minute.
+
+## Update Dataset
+
+Say you want to update your data daily or weekly, below are the steps to do just that:
+
+1. Use the bookmarklet to export your data
+2. Go to your [data sources](https://lookerstudio.google.com/u/0/navigation/datasources) in Looker Studio
+3. Click on your data source and click `Edit Connection` at the top left on the next screen
+4. Delete the existing CSV from the dataset and upload your newly exported data
+5. Click `Reconnect` at the top right
+6. Go back to your report, click on the 3-dot button, and choose `Refresh data`
