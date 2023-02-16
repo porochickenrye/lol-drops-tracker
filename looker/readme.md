@@ -1,8 +1,10 @@
+> :warning: **If you are looking to replace a report you created earlier with an updated template**: [see this section](#use-updated-template)
+
+> :warning: **If you are looking to update your data**: [see this section](#update-dataset)
+
 ## How to visualize your drops data with Looker
 
 ![Looker Studio](/img/sample-viz.png)
-
-> :warning: **If you are looking to replace a report you created earlier with an updated template**: [see this section](#use-updated-template)
 
 Follow the below steps to set up your own Looker report based on a template I have put together. The reason I chose Looker is because it has the lowest barrier to entry technically and financially.
 
