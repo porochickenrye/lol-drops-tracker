@@ -38,7 +38,7 @@ Follow the below steps to set up your own Looker report based on a template I ha
 
 ![](7-upload-file.png)
 
-8. After you upload the file, it should show up as `Proccessing`. Wait until the staus turns green `Uploaded` before moving on to the next step by clicking the blue `Connect` button at the top right.
+8. After you upload the file, it should show up as `Processing`. Wait until the staus turns green `Uploaded` before moving on to the next step by clicking the blue `Connect` button at the top right.
 
 ![](8-upload-processing.png)
 

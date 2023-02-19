@@ -21,7 +21,7 @@ javascript:void%20function(){async%20function%20a(a,b){return(await%20fetch(a,b)
 ### Export the Data
 1. Go to [https://lolesports.com/rewards](https://lolesports.com/rewards) and make sure you are logged in.
 2. Click on the bookmarklet. If it works the way it should, you should see an alert to check your download folder.
-3. The exported file is in CSV format. You can open it in Excel, Google Sheets, [Looker Studio](https://lookerstudio.google.com), [Tableau](https://public.tableau.com/app/discover), [Trevor](https://trevor.io), [Redash](https://redash.io/), [Apache Superset](https://superset.apache.org/) etc. to analyze your drop achivements.
+3. The exported file is in CSV format. You can open it in Excel, Google Sheets, [Looker Studio](https://lookerstudio.google.com), [Tableau](https://public.tableau.com/app/discover), [Trevor](https://trevor.io), [Redash](https://redash.io/), [Apache Superset](https://superset.apache.org/) etc. to analyze your drop achievements.
 
 
 ### Visualize the Data
