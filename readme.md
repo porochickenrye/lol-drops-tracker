@@ -1,6 +1,6 @@
 ## Overview
 
-Have you ever wanted a way to download your League of Legends esports drop achivement data? Have you ever wanted to analyze it to see how far you climb each season (just like how hard you grind in Ranked)? 
+Have you ever wanted a way to download your League of Legends esports drop achievement data? Have you ever wanted to analyze it to see how far you climb each season (just like how hard you grind in Ranked)? 
 
 Well, now you can. This bookmarket allows you to export [your drops](https://lolesports.com/rewards) to a CSV file. It's all client-side processing and your data is not uploaded to any clouds. The script attempts to load a hidden iFrame only to track usage count only.
 
